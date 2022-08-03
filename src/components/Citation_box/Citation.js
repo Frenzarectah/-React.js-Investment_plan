@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { globale } from "../../App";
 import '../Citation_box/Citation.css';
-import UP from './assets/UP.png';
+import UP from 'src/assets/UP.png'
 
 const cit = {
     1:{cit:"We care about your time, that's why we created a 3-stage onboarding that will not take more than 5 minutes to complete",name:"William Mac",title:"CO-FOUNDER, INVESTOR"},

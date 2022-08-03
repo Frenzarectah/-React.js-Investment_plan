@@ -1,7 +1,7 @@
 import React,{useContext} from "react";
 import { globale, userDB } from "../../App";
 import App from "../../App";
-import arrow from "./assets/arrow_left.png";
+import arrow from "src/assets/arrow_left.png";
 
 const Footer = () =>{
     const userDatas = useContext(userDB);

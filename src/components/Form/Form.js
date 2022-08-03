@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { globale } from "../../App";
 import '../Form/Form.css';
-import arrow from "./assets/arrow.png";
+import arrow from "src/assets/arrow.png";
 
 let userDatas = 
 {
