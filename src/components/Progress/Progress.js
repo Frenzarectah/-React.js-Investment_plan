@@ -11,7 +11,7 @@ const Progress = (props)=>{
     //const [page,setPage] = useContext(globale);
     //if(props.num <= page) style={opacity:"1"}
     return(
-        <div style={style}>
+        <div style={{opacity:"1"}}>
         <div className="text-left flex flex-row text-black md:text-white lg:text-white text-lg montserrat_alt">
                 <div id="placeholder" className="flex justify-center items-center">
                     <img alt="rectangle" style={{width:"11px",height:"11px"}} src={rect}/>

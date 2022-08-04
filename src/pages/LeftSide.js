@@ -1,12 +1,20 @@
 import React from "react";
 import pageInfo from "../utils";
-import Progress from "../components/Progress/Progress.js";
-import LastProgress from "../components/Progress/LastProgress.js";
+import logo1 from '../assets/UNITED.png';
+import logo2 from '../assets/PROPERTIES.png';
+import ProgressSet from "../components/Progress/ProgressSet";
+import Citation from "../components/Citation_box/Citation";
 
 const LeftSide = () =>{
     return(
         <div className="w-[500px] h-full bg-[#35A0EE] p-[52px]">
-         questo a sinistra
+        <div class="flex flex-row"><img src={logo1}/><img src={logo2}/></div>
+        <div class="mt-[150px]"> 
+         <ProgressSet/>
+        </div>
+        <div class="mt-[50px]">
+         <Citation/>   
+        </div>
         </div>
     )
 }

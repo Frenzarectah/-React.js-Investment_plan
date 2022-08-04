@@ -1,7 +1,6 @@
 import { useContext } from "react";
-import { globale } from "../../App";
 import '../Citation_box/Citation.css';
-import UP from 'src/assets/UP.png'
+import UP from '../../assets/UP.png';
 
 const cit = {
     1:{cit:"We care about your time, that's why we created a 3-stage onboarding that will not take more than 5 minutes to complete",name:"William Mac",title:"CO-FOUNDER, INVESTOR"},
@@ -9,7 +8,7 @@ const cit = {
     3:{cit:"United Properties is about fast & easy searching, buying, selling and investing ever — online, with an expert by our side",name:"Ollie Mcmahon",title:"MANAGING DIRECTOR"}
 }
 const Citation = () =>{
-    const [page,setPage] = useContext(globale);
+    const [page,setPage] = useContext(global);
     return(
         <>
             <div style={{width:"22vw",height:"33vh"}} className="flex flex-col justify-center px-[20px] pt-[10px] items-start bg-white montserrat text-[#A4AEB4] text-md rounded">

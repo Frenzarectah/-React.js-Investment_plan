@@ -485,6 +485,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-bottom: 12px;
 }
 
+.mt-\[200px\] {
+  margin-top: 200px;
+}
+
 .mt-\[20px\] {
   margin-top: 20px;
 }
@@ -529,6 +533,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-bottom: 0.5rem;
 }
 
+.mt-\[150px\] {
+  margin-top: 150px;
+}
+
+.mt-\[50px\] {
+  margin-top: 50px;
+}
+
 .block {
   display: block;
 }
@@ -537,16 +549,16 @@ Ensure the default browser behavior of the `hidden` attribute.
   display: flex;
 }
 
+.h-\[100vh\] {
+  height: 100vh;
+}
+
 .h-full {
   height: 100%;
 }
 
 .h-\[48px\] {
   height: 48px;
-}
-
-.h-\[100vh\] {
-  height: 100vh;
 }
 
 .w-full {
