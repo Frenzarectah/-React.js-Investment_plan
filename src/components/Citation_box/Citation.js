@@ -2,11 +2,8 @@ import { useContext } from "react";
 import '../Citation_box/Citation.css';
 import UP from '../../assets/UP.png';
 
-const cit = {
-    1:{cit:"We care about your time, that's why we created a 3-stage onboarding that will not take more than 5 minutes to complete",name:"William Mac",title:"CO-FOUNDER, INVESTOR"},
-    2:{cit:"Save from thousands to millions on your deal. Secure the best possible. And get independent, unbiased advice for free",name:"Jodie Sears",title:"UNITED PROPERTIES' AGENT"},
-    3:{cit:"United Properties is about fast & easy searching, buying, selling and investing ever — online, with an expert by our side",name:"Ollie Mcmahon",title:"MANAGING DIRECTOR"}
-}
+//cit è stato trasferito su utils.js
+
 const Citation = () =>{
     const [page,setPage] = useContext(global);
     return(
