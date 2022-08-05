@@ -15,7 +15,7 @@ const Footer = () =>{
         Object.keys(userDatas).forEach((items)=>{
             userDatas[items] = document.forms["register_form"][items.toString()].value
             console.log(userDatas);
-            browse("../page1", { replace: false});
+            browse("../page1", { replace: true});
         });
     }    
     return(

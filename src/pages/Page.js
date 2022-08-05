@@ -11,6 +11,7 @@ const Page = () =>{
     const [page,setPage] = useContext(globale);
     return(
         <>
+        <BrowserRouter>
         <div className='mt-[20px] mr-[245px] flex flex-col'>
             <div className='montserrat-alt text-black extrabold text-[28px]'>
                 {pageInfo[page].title}
@@ -19,7 +20,6 @@ const Page = () =>{
                 {pageInfo[page].subtitle}
             </div>
             <div id="page_form">
-            <BrowserRouter>
             <Routes>
             <>
               <Route path="/" element={<Form/>}/>
@@ -27,10 +27,8 @@ const Page = () =>{
               <Route path="/page2" element={<Form/>}/>
             </>
             </Routes>
-          </BrowserRouter>
             </div>
         </div>
-        <BrowserRouter>
         <Footer/>
         </BrowserRouter>
         </>
