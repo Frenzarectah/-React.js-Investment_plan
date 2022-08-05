@@ -5,9 +5,10 @@ import Form from '../components/Form/Form';
 import Form1 from '../components/Form1/Form1';
 import Footer from '../components/Footer/Footer';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import {pageInfo} from '../utils';
 
 const Page = () =>{
-    const [page,setPage,pageInfo] = useContext(globale);
+    const [page,setPage] = useContext(globale);
     return(
         <>
         <div className='mt-[20px] mr-[245px] flex flex-col'>
@@ -29,7 +30,9 @@ const Page = () =>{
           </BrowserRouter>
             </div>
         </div>
+        <BrowserRouter>
         <Footer/>
+        </BrowserRouter>
         </>
     )
 }

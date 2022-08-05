@@ -1,11 +1,11 @@
 import React,{useContext} from "react";
-import { globale, userDB } from "../../App";
-import App from "../../App";
-import arrow from "src/assets/arrow_left.png";
-
+import { globale } from "../../App";
+import arrow from "../../assets/arrow_left.png";
+import {userDatas} from "../../utils";
+import { useNavigate } from "react-router-dom";
 const Footer = () =>{
-    const userDatas = useContext(userDB);
-    const [page,setPage,pageInfo] = useContext(globale);
+    let browse = useNavigate();
+    const [page,setPage] = useContext(globale);
     //setting higher level setter functs to limit the "page" state
   
     const setPageMax = ()=> page<3?setPage(page+1):setPage(page);
@@ -15,9 +15,8 @@ const Footer = () =>{
         Object.keys(userDatas).forEach((items)=>{
             userDatas[items] = document.forms["register_form"][items.toString()].value
             console.log(userDatas);
+            browse("../page1", { replace: false});
         });
-        document.location.href="/page1";
-        setPageMax()
     }    
     return(
         <footer className="mt-[15px] mr-0 w-full flex flex-row justify-between items-baseline">
@@ -25,7 +24,7 @@ const Footer = () =>{
             <a href="#" onClick={()=>setPageMin()}>  
                 <img style={{width:"16px",height:"8px"}} src={arrow}/>
             </a>
-            <span>Back to Homepage</span>
+            <span className="montserrat">Back to Homepage</span>
             </div>
             <div>
                 <button className="w-[154px] h-[48px] mx-[10px] bg-[#c5eceb] text-[#35a0ee] rounded montserrat" onClick={()=>setPageMax()}>Skip For Now</button>
