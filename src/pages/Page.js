@@ -12,20 +12,18 @@ const Page = () =>{
     return(
         <>
         <BrowserRouter>
-        <div className='mt-[20px] mr-[245px] flex flex-col'>
+        <div className='mt-[20px] flex flex-col'>
             <div className='montserrat-alt text-black extrabold text-[28px]'>
                 {pageInfo[page].title}
             </div>
-            <div className='mt-[12px] montserrat text-[#A4AEB4] text-md'>
+            <div className='mt-[12px] mr-[245px] montserrat text-[#A4AEB4] text-md'>
                 {pageInfo[page].subtitle}
             </div>
-            <div id="page_form">
+            <div id="page_form" className="w-full">
             <Routes>
-            <>
               <Route path="/" element={<Form/>}/>
               <Route path="/page1" element={<Form1/>}/>
               <Route path="/page2" element={<Form/>}/>
-            </>
             </Routes>
             </div>
         </div>

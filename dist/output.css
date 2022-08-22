@@ -470,8 +470,9 @@ Ensure the default browser behavior of the `hidden` attribute.
   z-index: 10;
 }
 
-.m-\[10px\] {
-  margin: 10px;
+.mx-\[50px\] {
+  margin-left: 50px;
+  margin-right: 50px;
 }
 
 .mx-\[10px\] {
@@ -479,24 +480,9 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-right: 10px;
 }
 
-.mx-auto {
-  margin-left: auto;
-  margin-right: auto;
-}
-
 .my-\[12px\] {
   margin-top: 12px;
   margin-bottom: 12px;
-}
-
-.mx-\[20px\] {
-  margin-left: 20px;
-  margin-right: 20px;
-}
-
-.mx-\[50px\] {
-  margin-left: 50px;
-  margin-right: 50px;
 }
 
 .mt-\[100px\] {
@@ -756,6 +742,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 .text-\[\#a4aeb4\] {
   --tw-text-opacity: 1;
   color: rgb(164 174 180 / var(--tw-text-opacity));
+}
+
+.text-\[\#00ff00\] {
+  --tw-text-opacity: 1;
+  color: rgb(0 255 0 / var(--tw-text-opacity));
 }
 
 .shadow-black {

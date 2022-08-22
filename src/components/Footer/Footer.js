@@ -16,12 +16,17 @@ const Footer = () =>{
             userDatas[items] = document.forms["register_form"][items.toString()].value
             console.log(userDatas);
             browse("../page1", { replace: true});
+            setPageMax();
         });
     }    
     return(
         <footer className="mt-[15px] mr-0 w-full flex flex-row justify-between items-baseline">
             <div className="w-1/3 ml-[12px] text-[16px] text-[#2696E8] flex flex-row items-baseline">
-            <a href="#" onClick={()=>setPageMin()}>  
+            <a href="#" onClick={
+                ()=>{
+                    setPage(1);
+                    browse("../", { replace: true});
+                }}>  
                 <img style={{width:"16px",height:"8px"}} src={arrow}/>
             </a>
             <span className="montserrat">Back to Homepage</span>
