@@ -19,11 +19,11 @@ const Form = () =>{
      
         return(
             <form name="register_form" className="montserrat w-100 flex flex-col" onSubmit={()=>nextStep1()}>
-                <div className="flex flex-row justify-between">
+                <div className="w-[540px] flex flex-row justify-between">
                     <label className="w-[270px] text-[14px] text-[#A4AEB4]">Full Name:</label>
                     <label className="w-[230px] text-[14px] text-[#A4AEB4]">Number:</label>
                 </div>
-                <div className="flex flex-row justify-between">
+                <div className="w-[540px] flex flex-row justify-between">
                     <input type="text" name="name" className="w-[270px] text-[21px] text-black border-b-2 border-[#D5D9DC]" required/>
                     <input type="tel" name="number" className="w-[230px] text-[21px] text-black border-b-2 border-[#D5D9DC]" required/>
                 </div>
