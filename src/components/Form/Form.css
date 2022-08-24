@@ -1,26 +1,4 @@
-#privacy{
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  border:1px solid red;
-  position:absolute;
-  text-align:center;
-  top:25%;
-  box-shadow:10px 5px 10px #dcdcdc;
-  left:50%;
-  display:none;
-  background-color:white;
-  width:200px;
-  height:150px;
-  color:black;
-  border-radius:5px;
-}
-  #privacy .header{
-    margin-bottom:5px;
-    height:30px;
-    background-color:#35A0EE;
-    color:white;
-  }
+
 input:focus{
   outline: none;
   border-color:blue;
