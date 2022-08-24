@@ -1,8 +1,10 @@
 import { useContext } from "react";
+import { useState } from "react";
 import { globale } from "../../App";
 import '../Form/Form.css';
 import arrow from "../../assets/arrow.png";
 import {userDatas} from '../../utils';
+import PrivacyModal from "../Modals/PrivacyModal";
 
 const nextStep1 = ()=>{
     Object.keys(userDatas).forEach((items)=>{
@@ -12,8 +14,9 @@ const nextStep1 = ()=>{
 }  
 const Form = () =>{
     const [page,setPage] = useContext(globale);
+    const [open,setOpen] = useState(false);
     //function to open the privacy modal
-    const openPrivacy = () => document.getElementById("privacy").style.display="block";  
+     
         return(
             <form name="register_form" className="montserrat w-100 flex flex-col" onSubmit={()=>nextStep1()}>
                 <div className="flex flex-row justify-between">
@@ -37,10 +40,11 @@ const Form = () =>{
                    <div className="text-[16px] text-[#a4aeb4] my-[12px]">We know you care about how your personal information is used and shared, so we take your privacy seriously</div>
                    <div className="text-[16px] text-[#2696E8] flex flex-row items-baseline">
                     <span>Expand privacy policy</span>
-                        <a href="#" onClick={()=>openPrivacy()}>  
+                        <a href="#" onClick={()=>setOpen(!open)}>  
                             <img style={{width:"16px",height:"8px"}} src={arrow}/>
                         </a>
                     </div> 
+                    <PrivacyModal visibility={open}/>
                 </div>
             </form>
         )
