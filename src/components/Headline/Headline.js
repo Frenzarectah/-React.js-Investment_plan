@@ -6,7 +6,7 @@ import HelpModal from "../Modals/HelpModal";
 
 const Headline = () =>{
     const [page,setPage] = useContext(globale);
-    const [open,setOpen] = setState(false);
+    const [open,setOpen] = setOpen(false);
     return(
         <div className='flex flex-row justify-between w-full'>
             <div className='text-[#A4AEB4]'>STEP {page} OF 3</div>
