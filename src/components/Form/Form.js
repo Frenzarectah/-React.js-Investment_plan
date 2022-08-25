@@ -15,16 +15,15 @@ const nextStep1 = ()=>{
 const Form = () =>{
     const [page,setPage] = useContext(globale);
     const [open,setOpen] = useState(false);
-    //function to open the privacy modal
-     
+    const [content, setContent] = useState([]);
         return(
-            <form name="register_form" className="montserrat w-100 flex flex-col" onSubmit={()=>nextStep1()}>
+            <form id="form" name="register_form" className="montserrat w-100 flex flex-col" onSubmit={()=>alert("submittato!")}>
                 <div className="w-[540px] flex flex-row justify-between">
                     <label className="w-[270px] text-[14px] text-[#A4AEB4]">Full Name:</label>
                     <label className="w-[230px] text-[14px] text-[#A4AEB4]">Number:</label>
                 </div>
                 <div className="w-[540px] flex flex-row justify-between">
-                    <input type="text" name="name" className="w-[270px] text-[21px] text-black border-b-2 border-[#D5D9DC]" required/>
+                    <input type="text" name="name" onChange={(e) => setContent(e.target.value)} className="w-[270px] text-[21px] text-black border-b-2 border-[#D5D9DC]" required/>
                     <input type="tel" name="number" className="w-[230px] text-[21px] text-black border-b-2 border-[#D5D9DC]" required/>
                 </div>
                 <div className="w-[540px] flex flex-col">
@@ -46,9 +45,9 @@ const Form = () =>{
                     </div> 
                     <PrivacyModal visibility={open}/>
                 </div>
+                {content}
             </form>
         )
 }
-
 
 export default Form;
