@@ -16,14 +16,17 @@ const Form = () =>{
     const recordData = (field,value) =>{
         setContent(values => ({...values, [field]: value}))
     }
-    const submitting = () =>{
-        userDatas = content;
-        const redir = "../page"+page;
+    const submitting = event =>{
+        event.preventDefault();
+        for(let key in content){
+            userDatas[key] = content[key];
+        }
+        let redir = "../page"+page;
         browse(redir);
         setPage(page+1);
     }
         return(
-            <form id="form" name="register_form" method="post" className="montserrat w-100 flex flex-col" onSubmit={()=>submitting()}>
+            <form id="form" name="register_form" className="montserrat w-100 flex flex-col" onSubmit={submitting}>
                 <div className="w-[540px] flex flex-row justify-between">
                     <label className="w-[270px] text-[14px] text-[#A4AEB4]">Full Name:</label>
                     <label className="w-[230px] text-[14px] text-[#A4AEB4]">Number:</label>
