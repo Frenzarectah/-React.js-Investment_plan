@@ -4,25 +4,12 @@ import arrow from "../../assets/arrow_left.png";
 import {userDatas} from "../../utils";
 import { useNavigate } from "react-router-dom";
 const Footer = () =>{
-    let browse = useNavigate();
     const [page,setPage] = useContext(globale);
+    
     //setting higher level setter functs to limit the "page" state
-  
     const setPageMax = ()=> page<3?setPage(page+1):setPage(page);
     const setPageMin = ()=> page>1?setPage(page-1):setPage(page);
-    
-    //settin the funct to save data on a pseudo-db (an object)
-    const nextStep = ()=>{
-        let fields = document.getElementById("form");
-        let nfields = fields.getElementsByTagName("input").length;
-        for(let i=0;i<=nfields-1;i++){
-            userDatas[i] = fields.getElementsByTagName("input")[i].value
-        }
-        console.log(userDatas);
-        const redir = "../page"+page;
-        browse(redir, { replace: true});
-        setPageMax();
-    }    
+    let browse = useNavigate(); 
     return(
         <footer className="mt-[15px] mr-0 w-full flex flex-row justify-between items-baseline">
             <div className="w-1/3 ml-[12px] text-[16px] text-[#2696E8] flex flex-row items-baseline">
@@ -37,7 +24,7 @@ const Footer = () =>{
             </div>
             <div>
                 <button className="w-[154px] h-[48px] mx-[10px] bg-[#c5eceb] text-[#35a0ee] rounded montserrat" onClick={()=>setPageMax()}>Skip For Now</button>
-                <button type="submit" form="form" className="w-[154px] h-[48px] bg-[#35a0ee] text-white rounded montserrat" /*</div>onClick={()=>nextStep()}*/>Next Step</button>
+                <button type="submit" form="form" className="w-[154px] h-[48px] bg-[#35a0ee] text-white rounded montserrat">Next Step</button>
             </div>
         </footer>
     )

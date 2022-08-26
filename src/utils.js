@@ -19,5 +19,5 @@ const pageInfo = {
       role:"MANAGING DIRECTOR"}
   }
 
-  let userDatas = [];
+  let userDatas = {};
 export { pageInfo, userDatas };

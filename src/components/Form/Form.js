@@ -1,38 +1,44 @@
 import { useContext } from "react";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { globale } from "../../App";
 import '../Form/Form.css';
 import arrow from "../../assets/arrow.png";
 import {userDatas} from '../../utils';
 import PrivacyModal from "../Modals/PrivacyModal";
 
-const nextStep1 = ()=>{
-    Object.keys(userDatas).forEach((items)=>{
-        userDatas[items] = document.forms["register_form"][items.toString()].value
-        console.log(userDatas);
-    });
-}  
 const Form = () =>{
     const [page,setPage] = useContext(globale);
     const [open,setOpen] = useState(false);
-    const [content, setContent] = useState([]);
+    const [content, setContent] = useState({});
+    let browse = useNavigate();
+
+    const recordData = (field,value) =>{
+        setContent(values => ({...values, [field]: value}))
+    }
+    const submitting = () =>{
+        userDatas = content;
+        const redir = "../page"+page;
+        browse(redir);
+        setPage(page+1);
+    }
         return(
-            <form id="form" name="register_form" className="montserrat w-100 flex flex-col" onSubmit={()=>alert("submittato!")}>
+            <form id="form" name="register_form" method="post" className="montserrat w-100 flex flex-col" onSubmit={()=>submitting()}>
                 <div className="w-[540px] flex flex-row justify-between">
                     <label className="w-[270px] text-[14px] text-[#A4AEB4]">Full Name:</label>
                     <label className="w-[230px] text-[14px] text-[#A4AEB4]">Number:</label>
                 </div>
                 <div className="w-[540px] flex flex-row justify-between">
-                    <input type="text" name="name" onChange={(e) => setContent(e.target.value)} className="w-[270px] text-[21px] text-black border-b-2 border-[#D5D9DC]" required/>
-                    <input type="tel" name="number" className="w-[230px] text-[21px] text-black border-b-2 border-[#D5D9DC]" required/>
+                    <input type="text" name="name" onChange={(e) => recordData(e.target.name,e.target.value)} className="w-[270px] text-[21px] text-black border-b-2 border-[#D5D9DC]" required/>
+                    <input type="tel" name="number" onChange={(e) => recordData(e.target.name,e.target.value)} className="w-[230px] text-[21px] text-black border-b-2 border-[#D5D9DC]" required/>
                 </div>
                 <div className="w-[540px] flex flex-col">
                     <label className="text-[14px] text-[#A4AEB4]">Email Address:</label>
-                    <input type="email" name="mail" className="text-[21px] text-black border-b-2 border-[#D5D9DC]" required></input>
+                    <input type="email" name="mail" onChange={(e) => recordData(e.target.name,e.target.value)} className="text-[21px] text-black border-b-2 border-[#D5D9DC]" required></input>
                 </div>
                 <div className="w-[540px] flex flex-col">
                     <label className="text-[14px] text-[#A4AEB4]">Country:</label>
-                    <input type="email" name="country" className="text-[21px] text-black border-b-2 border-[#D5D9DC]" required></input>
+                    <input type="text" name="country" onChange={(e) => recordData(e.target.name,e.target.value)} className="text-[21px] text-black border-b-2 border-[#D5D9DC]" required></input>
                 </div>
                 <div className="w-[540px] mt-[30px] flex flex-col">
                    <div className="text-[21px] extrabold text-black">Privacy Policy</div>
@@ -45,7 +51,6 @@ const Form = () =>{
                     </div> 
                     <PrivacyModal visibility={open}/>
                 </div>
-                {content}
             </form>
         )
 }
