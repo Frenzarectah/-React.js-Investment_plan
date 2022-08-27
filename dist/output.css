@@ -569,20 +569,16 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 154px;
 }
 
+.w-\[540px\] {
+  width: 540px;
+}
+
 .w-\[270px\] {
   width: 270px;
 }
 
-.w-\[200px\] {
-  width: 200px;
-}
-
 .w-\[230px\] {
   width: 230px;
-}
-
-.w-\[540px\] {
-  width: 540px;
 }
 
 .flex-row {
@@ -641,11 +637,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .border-\[\#D5D9DC\] {
   --tw-border-opacity: 1;
   border-color: rgb(213 217 220 / var(--tw-border-opacity));
-}
-
-.border-black {
-  --tw-border-opacity: 1;
-  border-color: rgb(0 0 0 / var(--tw-border-opacity));
 }
 
 .bg-\[\#35A0EE\] {
