@@ -1,0 +1,12 @@
+.slider{
+    display:flex;
+    align-items:center;
+    -webkit-appearance: none;
+    appearance:none;
+    background-color:#E9F0F5;
+    outline:none;
+    height:5px;
+}
+datalist{
+    display:block;
+}

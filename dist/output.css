@@ -613,6 +613,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   justify-content: space-between;
 }
 
+.justify-around {
+  justify-content: space-around;
+}
+
 .self-center {
   align-self: center;
 }
@@ -637,6 +641,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 .border-\[\#D5D9DC\] {
   --tw-border-opacity: 1;
   border-color: rgb(213 217 220 / var(--tw-border-opacity));
+}
+
+.border-black {
+  --tw-border-opacity: 1;
+  border-color: rgb(0 0 0 / var(--tw-border-opacity));
 }
 
 .bg-\[\#35A0EE\] {
@@ -738,6 +747,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 .text-\[\#a4aeb4\] {
   --tw-text-opacity: 1;
   color: rgb(164 174 180 / var(--tw-text-opacity));
+}
+
+.text-\[\#35A0EE\] {
+  --tw-text-opacity: 1;
+  color: rgb(53 160 238 / var(--tw-text-opacity));
 }
 
 .shadow-black {

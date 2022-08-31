@@ -7,9 +7,12 @@ const Footer = () =>{
     const [page,setPage] = useContext(globale);
     
     //setting higher level setter functs to limit the "page" state
-    const setPageMax = ()=> page<3?setPage(page+1):setPage(page);
-    const setPageMin = ()=> page>1?setPage(page-1):setPage(page);
-    let browse = useNavigate(); 
+    const browse = useNavigate(); 
+    const setPageMax = ()=>{
+        page<3?setPage(page+1):setPage(page);
+        let redir = "/page"+page;
+        browse(redir);
+    }
     return(
         <footer className="mt-[15px] mr-0 w-full flex flex-row justify-between items-baseline">
             <div className="w-1/3 ml-[12px] text-[16px] text-[#2696E8] flex flex-row items-baseline">
