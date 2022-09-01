@@ -5,8 +5,20 @@
     appearance:none;
     background-color:#E9F0F5;
     outline:none;
+    border-radius:0%;
     height:5px;
+}
+.slider::-webkit-slider-thumb{
+    border-radius:0px;
+}
+.slider::-moz-range-thumb {
+    border-radius:0px;
 }
 datalist{
     display:block;
+}
+#slider1{
+    position:relative;
+    top:-5px;
+    background-color:transparent;
 }
