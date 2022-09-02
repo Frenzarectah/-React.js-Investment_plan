@@ -1,4 +1,7 @@
 .slider{
+    background-color:blue;
+}
+.slider{
     position:relative;
     top:8px;
     display:flex;
@@ -49,4 +52,14 @@
 }
 datalist{
     display:block;
+}
+input:focus{
+    outline: none;
+    border-color:blue;
+}
+input::placeholder{
+    color:black;
+}
+input:active{
+	background-color:blue;
 }

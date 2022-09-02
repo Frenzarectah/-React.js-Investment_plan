@@ -537,6 +537,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-bottom: 0.5rem;
 }
 
+.mb-\[40px\] {
+  margin-bottom: 40px;
+}
+
+.mt-\[45px\] {
+  margin-top: 45px;
+}
+
 .flex {
   display: flex;
 }
@@ -581,6 +589,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 230px;
 }
 
+.w-1\/2 {
+  width: 50%;
+}
+
 .flex-row {
   flex-direction: row;
 }
@@ -613,10 +625,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   justify-content: space-between;
 }
 
-.justify-around {
-  justify-content: space-around;
-}
-
 .self-center {
   align-self: center;
 }
@@ -641,11 +649,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .border-\[\#D5D9DC\] {
   --tw-border-opacity: 1;
   border-color: rgb(213 217 220 / var(--tw-border-opacity));
-}
-
-.border-black {
-  --tw-border-opacity: 1;
-  border-color: rgb(0 0 0 / var(--tw-border-opacity));
 }
 
 .bg-\[\#35A0EE\] {

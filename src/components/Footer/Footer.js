@@ -5,8 +5,6 @@ import {userDatas} from "../../utils";
 import { useNavigate } from "react-router-dom";
 const Footer = () =>{
     const [page,setPage] = useContext(globale);
-    
-    //setting higher level setter functs to limit the "page" state
     const browse = useNavigate(); 
     const setPageMax = ()=>{
         page<3?setPage(page+1):setPage(page);
