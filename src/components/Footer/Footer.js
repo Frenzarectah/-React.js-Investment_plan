@@ -3,6 +3,7 @@ import { globale } from "../../App";
 import arrow from "../../assets/arrow_left.png";
 import {userDatas} from "../../utils";
 import { useNavigate } from "react-router-dom";
+import Button from "../Button/Button";
 const Footer = () =>{
     const [page,setPage] = useContext(globale);
     const browse = useNavigate(); 
@@ -26,6 +27,7 @@ const Footer = () =>{
             <div>
                 <button className="w-[154px] h-[48px] mx-[10px] bg-[#c5eceb] text-[#35a0ee] rounded montserrat" onClick={()=>setPageMax()}>Skip For Now</button>
                 <button type="submit" form="form" className="w-[154px] h-[48px] bg-[#35a0ee] text-white rounded montserrat">Next Step</button>
+                <Button width="154px" bkgcolor="red" color="white" text="react_compt"/>
             </div>
         </footer>
     )
