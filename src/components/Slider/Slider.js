@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import './slider.css';
 
-const Slider = () =>{
+const Slider = (props) =>{
+    const dati = "vercingetorige";
     const [valuerMin, setValuerMin] = useState();
     const [valuerMax,setValuerMax] = useState();
     const interval = ["10.000","50.000","100.000","200.000","500.000","1.000.000"];
@@ -25,7 +26,9 @@ const Slider = () =>{
                 <option value="4" label="500.000$"></option>
                 <option value="5" label="1.000.000$"></option>
               </datalist>
+              <div onClick={()=>props.funct(dati)}>CLICCAQUI</div>
         </div>
+
     )
 }
 export default Slider;
