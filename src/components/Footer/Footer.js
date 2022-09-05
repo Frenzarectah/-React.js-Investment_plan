@@ -4,7 +4,9 @@ import arrow from "../../assets/arrow_left.png";
 import {userDatas} from "../../utils";
 import { useNavigate } from "react-router-dom";
 import Button from "../Button/Button";
+
 const Footer = () =>{
+    let butnProps =[];
     const [page,setPage] = useContext(globale);
     const browse = useNavigate(); 
     const setPageMax = ()=>{
@@ -12,6 +14,7 @@ const Footer = () =>{
         let redir = "/page"+page;
         browse(redir);
     }
+
     return(
         <footer className="mt-[15px] mr-0 w-full flex flex-row justify-between items-baseline">
             <div className="w-1/3 ml-[12px] text-[16px] text-[#2696E8] flex flex-row items-baseline">
@@ -26,15 +29,10 @@ const Footer = () =>{
             </div>
             <div>
                 <button className="w-[154px] h-[48px] mx-[10px] bg-[#c5eceb] text-[#35a0ee] rounded montserrat" onClick={()=>setPageMax()}>Skip For Now</button>
-                <button type="submit" form="form" className="w-[154px] h-[48px] bg-[#35a0ee] text-white rounded montserrat">Next Step</button>
-                <Button width="154px" bkgcolor="red" color="white" text="react_compt"/>
+                <Button width="154px" bkgcolor="#35a0ee" color="white" text="Next Step"/>
             </div>
         </footer>
     )
 }
 export default Footer;
 
-        /*Object.keys(userDatas).forEach((items)=>{
-            userDatas[items] = document.forms["register_form"][items.toString()].value
-            console.log(userDatas);
-        });*/
