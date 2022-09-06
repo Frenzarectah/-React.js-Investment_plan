@@ -2,10 +2,21 @@ import React, { useState } from "react";
 import './slider.css';
 
 const Slider = (props) =>{
-    const dati = "vercingetorige";
+    const [bridgeMin,setBridgeMin] = useState();
+    const [bridgeMax,setBridgeMax] = useState();
     const [valuerMin, setValuerMin] = useState();
     const [valuerMax,setValuerMax] = useState();
     const interval = ["10.000","50.000","100.000","200.000","500.000","1.000.000"];
+    
+    const transfMin = (event) =>{
+      setValuerMin(interval[event.target.value]);
+      setBridgeMin(interval[event.target.value]);
+    }
+    const transfMax = (event) =>{
+      setValuerMax(interval[event.target.value]);
+      setBridgeMax(interval[event.target.value]);
+    }
+
     return(
         <div className="mt-[20px] w-full">
               <div className="w-full flex flex-row text-[#A4AEB4]">
@@ -16,8 +27,8 @@ const Slider = (props) =>{
                 <input type="text" className="w-1/2 text-black" placeholder={valuerMin} />
                 <input type="text" className="w-1/2 text-black" placeholder={valuerMax} />
               </div>
-              <input id="slider" type="range" min="0" max="5" step="1" className="w-full slider" list="valuers" onChange={(e)=>setValuerMin(interval[e.target.value])} />
-              <input id="slider1" type="range" min="0" max="5" step="1" className="w-full slider" list="valuers" onChange={(e)=>setValuerMax(interval[e.target.value])}/>
+              <input id="slider" type="range" min="0" max="5" step="1" className="w-full slider" list="valuers" onChange={(e)=>transfMin(e)} />
+              <input id="slider1" type="range" min="0" max="5" step="1" className="w-full slider" list="valuers" onChange={(e)=>transfMax(e)}/>
               <datalist id="valuers" className="flex flex-row justify-between mt-[10px] text-[#35A0EE] montserrat">
                 <option value="0" label="10.000$"></option>
                 <option value="1" label="50.000$"></option>
@@ -26,7 +37,7 @@ const Slider = (props) =>{
                 <option value="4" label="500.000$"></option>
                 <option value="5" label="1.000.000$"></option>
               </datalist>
-              <div onClick={()=>props.funct(dati)}>CLICCAQUI</div>
+              <div onClick={()=>props.funct(bridgeMin,bridgeMax)}>CLICCAQUI</div>
         </div>
 
     )

@@ -4,10 +4,10 @@ import { useNavigate } from "react-router-dom";
 import { globale } from "../../App";
 import '../Form/Form.css';
 import arrow from "../../assets/arrow.png";
-import {userDatas} from '../../utils';
+//import {userDatas} from '../../utils';
 import PrivacyModal from "../Modals/PrivacyModal";
 
-const Form = () =>{
+const Form = (props) =>{
     const [page,setPage] = useContext(globale);
     const [open,setOpen] = useState(false);
     const [content, setContent] = useState({});
@@ -19,7 +19,7 @@ const Form = () =>{
     const submitting = event =>{
         event.preventDefault();
         for(let key in content){
-            userDatas[key] = content[key];
+            props.db[key] = content[key];
         }
         let redir = "../page"+page;
         browse(redir);

@@ -2,12 +2,12 @@ import React, { useState } from "react";
 import { userDatas } from "../../utils";
 import Slider from "../Slider/Slider";
 
-
 const Form1 = ()=>{
-    const [data,setData] = useState("");
-    
-    const returnInfo = (dati)=>{
-        setData(dati);
+    const [min,setMin] = useState("");
+    const [max,setMax] =useState("");
+    const returnInfo = (min,max)=>{
+        setMin(min);
+        setMax(max);
     }
 
     return(
@@ -16,7 +16,7 @@ const Form1 = ()=>{
             <form id="investment_form" onSubmit={()=>alert("ciao")}>
                 <Slider funct={returnInfo}/>
             </form>
-            {data}
+            {min} {max}
         </div>
     )
 }
