@@ -3,9 +3,9 @@ import { globale } from "../../App";
 
 const Button = (props) =>{
     const [page,setPage] = useContext(globale);
-    let Form = "form";
+    let form = "";
 
-    page==1?Form="form":Form="investment_form";    
+    page==1?form="form":form="investment_form";    
     
     const style={
         "width":"154px",
@@ -14,7 +14,7 @@ const Button = (props) =>{
         "color":props.color,
     }
     return(
-        <button className="montserrat rounded" form={Form} style={style}>{props.text}</button>
+        <button type="submit" className="montserrat rounded" form={form} style={style}>{props.text}</button>
     )
 }
 export default Button;

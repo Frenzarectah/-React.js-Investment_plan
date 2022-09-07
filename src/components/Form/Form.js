@@ -7,7 +7,7 @@ import arrow from "../../assets/arrow.png";
 //import {userDatas} from '../../utils';
 import PrivacyModal from "../Modals/PrivacyModal";
 
-const Form = (props) =>{
+const Form = () =>{
     const [page,setPage] = useContext(globale);
     const [open,setOpen] = useState(false);
     const [content, setContent] = useState({});
@@ -19,9 +19,10 @@ const Form = (props) =>{
     const submitting = event =>{
         event.preventDefault();
         for(let key in content){
-            props.db[key] = content[key];
+            localStorage.setItem([key], content[key]);
         }
         let redir = "../page"+page;
+        console.log(localStorage);
         browse(redir);
         setPage(page+1);
     }

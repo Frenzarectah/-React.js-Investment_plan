@@ -1,22 +1,19 @@
 import React, { useState } from "react";
 import './slider.css';
 
-const Slider = (props) =>{
-    const [bridgeMin,setBridgeMin] = useState();
-    const [bridgeMax,setBridgeMax] = useState();
+const Slider = () =>{
     const [valuerMin, setValuerMin] = useState();
     const [valuerMax,setValuerMax] = useState();
     const interval = ["10.000","50.000","100.000","200.000","500.000","1.000.000"];
     
     const transfMin = (event) =>{
       setValuerMin(interval[event.target.value]);
-      setBridgeMin(interval[event.target.value]);
+      localStorage.setItem("min",valuerMin);
     }
     const transfMax = (event) =>{
       setValuerMax(interval[event.target.value]);
-      setBridgeMax(interval[event.target.value]);
+      localStorage.setItem("max",valuerMax);
     }
-
     return(
         <div className="mt-[20px] w-full">
               <div className="w-full flex flex-row text-[#A4AEB4]">
@@ -37,7 +34,7 @@ const Slider = (props) =>{
                 <option value="4" label="500.000$"></option>
                 <option value="5" label="1.000.000$"></option>
               </datalist>
-              <div onClick={()=>props.funct(bridgeMin,bridgeMax)}>CLICCAQUI</div>
+              {console.log(localStorage)}
         </div>
 
     )
