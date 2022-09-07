@@ -1,0 +1,16 @@
+#input__content{
+    width:137px;
+    height:48px;
+    border-radius:5px;
+    display:flex;
+    align-items:center;
+    justify-content:space-around;
+}
+.selected{
+    color:#35A0EE;
+    border:1px #35A0EE solid;
+}
+.unselected{
+    color:black;
+    border:1px black solid;
+}
