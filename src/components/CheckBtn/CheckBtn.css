@@ -1,0 +1,23 @@
+#checkBox{
+    padding:16px;
+    font-family:'montserrat';
+    width:136px;
+    height:148px;
+    border-radius:5px;
+    font-size:14px;
+    border:1px #d5d9dc solid;
+    color:#d5d9dc;
+    display:flex;
+    flex-direction:column;
+    justify-content: space-between;
+}
+input[type="checkbox"]{
+    color:#35a0ee;
+    border-color:#35a0ee;
+    display:flex;
+    align-self:flex-start;
+}
+.selected{
+    border:1px #35a0ee solid;
+    color: #35a0ee;
+}
