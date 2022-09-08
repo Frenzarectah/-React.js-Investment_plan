@@ -7,8 +7,8 @@ const RadioBtn = (props)=>{
     props.checked?className+="selected":className+="unselected";
     return(
         <div id="input__content" style={{width:"136px",height:"48px",borderRadius:"5px"}} className={className}>
-            <input type="radio" id={props.id} value={props.id} checked={props.checked} onClick={props.funct}/>
-            <label className="flex self-center" for={props.id}>{props.id}</label>
+            <input type="radio" id={props.id} value={props.value} checked={props.checked} onClick={props.funct}/>
+            <p className="flex self-center" for={props.id}>{props.id}</p>
         </div>
 )}
 export default RadioBtn;

@@ -13,8 +13,6 @@ function App() {
     <div className='w-full h-[100vh]'>
       <Layout/>
     </div>
-    <button onClick={()=>setPage(page+1)}>vai là</button>
-    <div>{page}</div>
     </globale.Provider>
   );
 }

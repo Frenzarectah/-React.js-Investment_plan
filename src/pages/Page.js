@@ -3,6 +3,7 @@ import { globale } from '../App';
 import '../App.css';
 import Form from '../components/Form/Form';
 import Form1 from '../components/Form1/Form1';
+import Form2 from '../components/Form2/Form2';
 import Footer from '../components/Footer/Footer';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import {pageInfo} from '../utils';
@@ -23,7 +24,7 @@ const Page = () =>{
             <Routes>
               <Route path="/" element={<Form/>}/>
               <Route path="/page1" element={<Form1/>}/>
-              <Route path="/page2" element={<Form/>}/>
+              <Route path="/page2" element={<Form2/>}/>
             </Routes>
             </div>
         </div>
