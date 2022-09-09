@@ -5,8 +5,6 @@
     height:148px;
     border-radius:5px;
     font-size:14px;
-    border:1px #d5d9dc solid;
-    color:#d5d9dc;
     display:flex;
     flex-direction:column;
     justify-content: space-between;
@@ -18,6 +16,10 @@ input[type="checkbox"]{
     align-self:flex-start;
 }
 .selected{
-    border:1px #35a0ee solid;
-    color: #35a0ee;
+    border:1px #35a0ee solid !important;
+    color: #35a0ee !important;
+}
+.unselected{
+    border:1px #d5d9dc solid;
+    color:#d5d9dc; 
 }
