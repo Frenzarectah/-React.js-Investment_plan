@@ -1,11 +1,13 @@
 import React from "react";
 import CheckBtn from "../CheckBtn/CheckBtn";
 import { useState } from "react";
+import ResumeModal from "../Modals/ResumeModal";
 const Form2 = () =>{
+    const [visible,setVisible] = useState(false);
     const submittino = event=>{
         event.preventDefault();
         alert(localStorage["name"]);
-        console.log("click a submit");
+        setVisible(true);
     }
     const checkList1 = ["Single Family","Residential Multifamily","Commercial Retail","Commercial Industrial"]
     const checkList2 = ["Commercial Hospitality","Commercial Warehousing","Commercial Office","Other"];
@@ -24,6 +26,7 @@ const Form2 = () =>{
             )}    
         </div>
     </form>
+    <ResumeModal visibility={visible} storage={localStorage}/>
     </>
 )}
 
