@@ -1,12 +1,20 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { globale } from "../../App";
 import RadioBtn from "../RadioBtn/RadioBtn";
 import Slider from "../Slider/Slider";
 
 const Form1 = ()=>{
+    const [page,setPage] = useContext(globale);
     const [selected,setSelected] = useState(true);
     const [selected1,setSelected1] = useState(false);
+    const browse = useNavigate();
+    
     const submittino = event =>{
         event.preventDefault();
+        let redir = "../page"+page;
+        browse(redir);
+        setPage(page+1);
     }
     const onChange = (event) =>{
         setSelected(!selected);
