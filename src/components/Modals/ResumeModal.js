@@ -2,6 +2,7 @@ import React from "react";
 
 const ResumeModal = (props) =>{
     if (props.visibility){
+        const accredited = (props.storage["accredited investor"])?"yes":"no";
         return(
                 <div id="modal">
                     <div className="header">REVIEW YOUR DETAILS! <span onClick={()=>document.location.reload()}>X</span></div>
@@ -11,7 +12,8 @@ const ResumeModal = (props) =>{
                         <p>Number:<b>{props.storage["number"]}</b></p>
                         <p>Email:<b>{props.storage["mail"]}</b></p>
                         <p>Country:<b>{props.storage["country"]}</b></p>
-                        <p>Accredited Investor:<b>{(props.storage["mail"])}</b></p>
+                        <p>Accredited Investor:<b>{accredited}</b></p>
+                        
                     </div>
                 </div>
         )

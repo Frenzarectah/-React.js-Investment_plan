@@ -31,7 +31,7 @@ const Form1 = ()=>{
                     <p className="mt-[45px] text-black text-[21px]">Are you an accredited Investor?</p>
                     <p className="w-[300px] mt-[20px] flex flex-row justify-between">
                         <RadioBtn id="yes" checked={selected} value="accredited investor" funct={(e)=>{onChange(e)}} />
-                        <RadioBtn id="no" checked={selected1} value="non accredited investor" funct={(e)=>{onChange(e)}}/>
+                        <RadioBtn id="no" checked={selected1} value="accredited investor" funct={(e)=>{onChange(e)}}/>
                     </p>
                 </div>
             </form>
