@@ -601,6 +601,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 50%;
 }
 
+.w-2\/3 {
+  width: 66.666667%;
+}
+
 .flex-row {
   flex-direction: row;
 }
@@ -631,6 +635,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .justify-between {
   justify-content: space-between;
+}
+
+.justify-around {
+  justify-content: space-around;
 }
 
 .self-center {

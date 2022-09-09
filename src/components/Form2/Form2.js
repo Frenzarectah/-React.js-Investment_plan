@@ -2,7 +2,6 @@ import React from "react";
 import CheckBtn from "../CheckBtn/CheckBtn";
 import { useState } from "react";
 const Form2 = () =>{
-    const [check,setCheck] =useState(false);
     const checkList1 = ["Single Family","Residential Multifamily","Commercial Retail","Commercial Industrial"]
     const checkList2 = ["Commercial Hospitality","Commercial Warehousing","Commercial Office","Other"];
     return(
@@ -11,12 +10,12 @@ const Form2 = () =>{
     <div id="wrapper" className="flex flex-col">
         <div className="flex flex-row">
             {checkList1.map((item) =>
-                <CheckBtn num="0" descr={item} checked={check} funct={()=>setCheck(!check)} />
+                <CheckBtn key={checkList1.indexOf(item)} descr={item} />
             )}
         </div>
         <div className="flex flex-row">
             {checkList2.map((item) =>
-                <CheckBtn num="0" descr={item} checked={check} funct={()=>setCheck(!check)} />
+                <CheckBtn key={checkList2.indexOf(item)} descr={item} />
             )}    
         </div>
     </div>

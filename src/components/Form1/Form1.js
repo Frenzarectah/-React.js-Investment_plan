@@ -12,6 +12,7 @@ const Form1 = ()=>{
         setSelected(!selected);
         setSelected1(!selected1);
         localStorage.setItem(event.target.value,selected);
+        localStorage.setItem(event.target.value,selected1);
     }
     return(
         <div className="montserrat_alt w-100 mt-[50px]">
@@ -21,7 +22,7 @@ const Form1 = ()=>{
                 <div className="w-[370px]">
                     <p className="mt-[45px] text-black text-[21px]">Are you an accredited Investor?</p>
                     <p className="w-[300px] mt-[20px] flex flex-row justify-between">
-                        <RadioBtn id="yes"  checked={selected} value="accredited investor" funct={(e)=>{onChange(e)}} />
+                        <RadioBtn id="yes" checked={selected} value="accredited investor" funct={(e)=>{onChange(e)}} />
                         <RadioBtn id="no" checked={selected1} value="non accredited investor" funct={(e)=>{onChange(e)}}/>
                     </p>
                 </div>
