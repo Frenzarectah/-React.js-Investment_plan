@@ -6,7 +6,6 @@ const Form2 = () =>{
     const [visible,setVisible] = useState(false);
     const submittino = event=>{
         event.preventDefault();
-        alert(localStorage["name"]);
         setVisible(true);
     }
     const checkList1 = ["Single Family","Residential Multifamily","Commercial Retail","Commercial Industrial"]
@@ -31,5 +30,4 @@ const Form2 = () =>{
 )}
 
 export default Form2;
-
 //<CheckBtn  num="0" descr={checkList1[0]} checked={check} funct={()=>setCheck(!check)}/>
