@@ -1,41 +1,25 @@
-import React from "react";
+import React, { useContext } from "react";
+import { globale } from "../../App";
 const ResumeModal = (props) =>{
-    if (props.visibility){
-        const accredited = (props.storage["accredited investor"])?"yes":"no";        
-        const list = ()=>{ 
-                for(let i=0; i<props.storage.length; i++) {
-                let key = localStorage.key(i);
-                return(
-                    <p>{key}:{localStorage.getItem(key)}</p>
-                );
-          }
-        }
-        
-        /*const list = Object.keys(props.storage).map((item)=>{
-                      return(
-                      <div><b>{localStorage.key(item+1)}</b>{props.storage[item]}</div>
-            );
-         });
-         /*return Object.keys(ObjectTest).map(obj, i) => {
-            return (
-                <div>
-                    id is: {ObjectTest[obj].id} ;
-                    name is: {ObjectTest[obj].name}
-                </div>
-            )*/
-        return(
+    const [page,setPage] = useContext(globale);
+    const keysContainer = Object.keys(localStorage);
+    const list = keysContainer.map((item, index) =>{
+                    return(
+                        <div>{keysContainer[index]}<b>{localStorage[item]}</b></div>
+                  )}
+                )
+    if (props.visibility){     
+            return(
             <div id="modal">
-                <div className="header">REVIEW YOUR DETAILS! <span onClick={()=>document.location.reload()}>X</span></div>
+                <div className="header">REVIEW YOUR DETAILS! <span onClick={()=>setPage(1)}>X</span></div>
                     <div className="content">
-                        <p>Your Datas are the seguent:</p>
+                        <p>Your Datas are the seguent:</p>           
                         {list}
-            
                 </div>
             </div>
         )
-        }
     }
-
+}
 export default ResumeModal;
 
             
