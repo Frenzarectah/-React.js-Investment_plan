@@ -11,10 +11,8 @@ import { useContext } from "react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { globale } from "../../App";
-
 import PrivacyModal from "../Modals/PrivacyModal";
 import arrow from "../../assets/arrow.png";
-
 import '../Form/Form.css';
 
 const Form = () =>{

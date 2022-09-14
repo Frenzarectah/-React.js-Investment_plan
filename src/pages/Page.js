@@ -25,7 +25,7 @@ const Page = () =>{
             <div className='mt-[12px] mr-[245px] montserrat text-[#A4AEB4] text-md'>
                 {pageInfo[page].subtitle}
             </div>
-            <div id="page_form" className="w-full">
+            <div id="page_form" className="w-full mt-[46px]">
             <Routes>
               <Route path="/" element={<Form/>}/>
               <Route path="/page1" element={<Form1/>}/>
