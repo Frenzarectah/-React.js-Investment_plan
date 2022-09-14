@@ -1,3 +1,11 @@
+/**
+ * this renders the price slider, where the user can choose the range of investment to be done.
+ * The accessibility of this component is not so good but it works.
+ * To make this slider like the mockup file I had to fuse two input range (to provide two different slider thumb).
+ * To correctly value the user choise, I created an array that assign to each label a value according to the mockup
+ * (called interval) and then transmitted to localStorage.
+ */
+
 import React, { useState } from "react";
 import './slider.css';
 
@@ -34,9 +42,7 @@ const Slider = () =>{
                 <option value="4" label="500.000$"></option>
                 <option value="5" label="1.000.000$"></option>
               </datalist>
-              {console.log(localStorage)}
         </div>
-
     )
 }
 export default Slider;
