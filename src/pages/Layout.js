@@ -1,3 +1,7 @@
+/**
+ * This is the main component which contain the two sides of the webapp
+ */
+
 import React from "react";
 import LeftSide from "./LeftSide.js";
 import RightSide from "./RightSide.js";

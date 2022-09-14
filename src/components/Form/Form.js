@@ -1,16 +1,25 @@
+/**
+ * this compt renders the first page of the app form, it uses "globale" context to access to the current page
+ * of the app, the useNavigate API to browser through the several pages and imports the PrivacyModal compt
+ * that opens the privacy popup.
+ * Also, it takes all the form datas and, at the submit funct, it records them to the localStorage object.
+ */
+
 import { useContext } from "react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { globale } from "../../App";
-import '../Form/Form.css';
-import arrow from "../../assets/arrow.png";
-//import {userDatas} from '../../utils';
+
 import PrivacyModal from "../Modals/PrivacyModal";
+import arrow from "../../assets/arrow.png";
+
+import '../Form/Form.css';
 
 const Form = () =>{
     const [page,setPage] = useContext(globale);
     const [open,setOpen] = useState(false);
     const [content, setContent] = useState({});
+    
     let browse = useNavigate();
 
     const recordData = (field,value) =>{
@@ -22,7 +31,6 @@ const Form = () =>{
             localStorage.setItem([key], content[key]);
         }
         let redir = "../page"+page;
-        console.log(localStorage);
         browse(redir);
         setPage(page+1);
     }
@@ -50,7 +58,7 @@ const Form = () =>{
                    <div className="text-[16px] text-[#2696E8] flex flex-row items-baseline">
                     <span>Expand privacy policy</span>
                         <a href="#" onClick={()=>setOpen(!open)}>  
-                            <img style={{width:"16px",height:"8px"}} src={arrow}/>
+                            <img alt="arrow" style={{width:"16px",height:"8px"}} src={arrow}/>
                         </a>
                     </div> 
                     <PrivacyModal visibility={open}/>

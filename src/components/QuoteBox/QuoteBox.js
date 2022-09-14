@@ -1,10 +1,17 @@
+/**
+ * this is the component which renders the quote box, the datas about the quotes are contains 
+ * into the pageInfo file used to storage them externally for a more readable code.
+ * Also, this compts imports "globale" context to read the page number of the app.
+
+*/
+
 import { useContext } from "react";
-import '../Citation_box/Citation.css';
-import UP from '../../assets/UP.png';
 import {pageInfo } from "../../utils";
 import { globale } from "../../App";
+import './QuoteBox.css';
+import UP from '../../assets/UP.png';
 
-const Citation = () =>{
+const QuoteBox = () =>{
     const [page,setPage] = useContext(globale);
     return(
         <>
@@ -20,4 +27,4 @@ const Citation = () =>{
         </>
     )
 }
-export default Citation;
+export default QuoteBox;
