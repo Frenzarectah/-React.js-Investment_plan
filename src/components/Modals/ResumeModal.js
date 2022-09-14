@@ -1,21 +1,23 @@
-import React, { useContext } from "react";
-import { globale } from "../../App";
+import React from "react";
+
 const ResumeModal = (props) =>{
-    const [page,setPage] = useContext(globale);
-    const keysContainer = Object.keys(localStorage);
+    //const keysContainer = Object.keys(localStorage);
+    const keysContainer = ["name","number","mail","country","accredited investor","min","max","Single Family","Residential Multifamily",
+                            "Commercial Retail","Commercial Industrial","Commercial Hospitality","Commercial Warehousing","Commercial Office","Other"];
     const list = keysContainer.map((item, index) =>{
                     return(
-                        <div>{keysContainer[index]}<b>{localStorage[item]}</b></div>
+                        <div className="text-xs">{keysContainer[index]}:<b> {localStorage[item]}</b></div>
                   )}
                 )
     if (props.visibility){     
             return(
-            <div id="modal">
-                <div className="header">REVIEW YOUR DETAILS! <span onClick={()=>setPage(1)}>X</span></div>
+            <div id="modal" className="lg">
+                <div className="header">REVIEW YOUR DETAILS! <span onClick={()=>window.location.reload()}>X</span></div>
                     <div className="content">
-                        <p>Your Datas are the seguent:</p>           
+                        <p className="text-xs">Your Datas are the next:</p>           
                         {list}
                 </div>
+                
             </div>
         )
     }
