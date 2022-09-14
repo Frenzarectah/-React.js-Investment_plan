@@ -1,3 +1,6 @@
+/**
+ * this renders the Radio button, it has. 
+ */
 import React from "react";
 import { useState } from "react";
 import '../RadioBtn/RadioBtn.css';

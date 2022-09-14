@@ -23,7 +23,7 @@ const QuoteBox = () =>{
                 <p className="flex w-full justify-end"><img alt="up logo" src={UP}/></p>
             </div>
             </div>               
-            <div className="citate bg-white rounded shadow-black z-10 border border-[#35A0EE]" style={{width:"56px",height:"56px"}}></div>
+            <div className="citate w-[56px] h-[56px] bg-white rounded shadow-black z-10 border border-[#35A0EE]"></div>
         </>
     )
 }

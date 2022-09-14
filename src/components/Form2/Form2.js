@@ -1,9 +1,14 @@
-import React from "react";
+/**
+ * This is the component that renders the last page of the App Form, it includes a list of CheckBtns components
+ * and the modal which returns the summary of all the user's choice.
+ * It'll being rendered after the click of the submit button for the last time.
+ */
+import {React, useState} from "react";
 import CheckBtn from "../CheckBtn/CheckBtn";
-import { useState } from "react";
 import ResumeModal from "../Modals/ResumeModal";
 const Form2 = () =>{
     const [visible,setVisible] = useState(false);
+    
     const submittino = event=>{
         event.preventDefault();
         setVisible(true);
@@ -25,9 +30,8 @@ const Form2 = () =>{
             )}    
         </div>
     </form>
-    <ResumeModal visibility={visible} storage={localStorage}/>
+    <ResumeModal visibility={visible}/>
     </>
 )}
 
 export default Form2;
-//<CheckBtn  num="0" descr={checkList1[0]} checked={check} funct={()=>setCheck(!check)}/>

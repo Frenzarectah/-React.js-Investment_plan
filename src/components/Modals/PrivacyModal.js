@@ -1,3 +1,7 @@
+/**
+ * it basically renders the modal which contains the privacy policy, the render depends on the visibiliy props,
+ * which is a boolean one.
+ */
 import React from "react";
 
 const PrivacyModal = (props)=>{

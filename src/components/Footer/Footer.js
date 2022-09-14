@@ -32,7 +32,7 @@ const Footer = () =>{
             </div>
             <div>
                 <button className="w-[154px] h-[48px] mx-[10px] bg-[#c5eceb] text-[#35a0ee] rounded montserrat" onClick={()=>setPageMax()}>Skip For Now</button>
-                <Button width="154px" bkgcolor="#35a0ee" color="white" text="Next Step"/>
+                <Button width="154px" bkgcolor="#35a0ee" color="white" text={page==3?"Finish":"Next Step"}/>
             </div>
         </footer>
     )

@@ -1,3 +1,7 @@
+/**
+ * it basically renders the modal which contains some help to the user, the render depends on the visibiliy props,
+ * which is a boolean one.
+ */
 import React from "react";
 import './modals.css';
 

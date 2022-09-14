@@ -1,11 +1,14 @@
+/**
+ * this is the Header component to render the namesake section of the webapp, it includes the bookmark which indicates
+ * the page where the user is placed to (it implements "globale" context to reach the global state "page").
+ * Also, it includes the HelpModal component in order to render the Help popup by clicking "Get Help!" hypertext link
+ */
 import React, { useContext } from "react";
 import { globale } from "../../App";
 import HelpModal from "../Modals/HelpModal";
 import { useState } from "react";
 
-//component which renders the headline above the app, on the right side
-
-const Headline = () =>{
+const Header = () =>{
     const [page,setPage] = useContext(globale);
     const [open,setOpen] = useState(false);
     return(
@@ -16,4 +19,4 @@ const Headline = () =>{
         </div>
     )
 }
-export default Headline;
+export default Header;

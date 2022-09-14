@@ -1,3 +1,8 @@
+/**
+ * this component renders the second form page of the webapp, composed by the Slider component
+ * (it has some accessibility problems in order to be as much possible to the provided layout)
+ * and the two RadioBtn components described into the theirselves file
+ */
 import React, { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { globale } from "../../App";
@@ -8,9 +13,10 @@ const Form1 = ()=>{
     const [page,setPage] = useContext(globale);
     const [selected,setSelected] = useState(true);
     const [selected1,setSelected1] = useState(false);
-    const browse = useNavigate();
     
-    const submittino = event =>{
+    let browse = useNavigate();
+    
+    const submitting = event =>{
         event.preventDefault();
         let redir = "../page"+page;
         browse(redir);
@@ -25,7 +31,7 @@ const Form1 = ()=>{
     return(
         <div className="montserrat_alt w-100 mt-[50px]">
             <p className="text-black text-[21px]">How much are you planning to invest in this year?</p>
-            <form id="investment_form" onSubmit={submittino}>
+            <form id="investment_form" onSubmit={submitting}>
                 <Slider/>
                 <div className="w-[370px]">
                     <p className="mt-[45px] text-black text-[21px]">Are you an accredited Investor?</p>

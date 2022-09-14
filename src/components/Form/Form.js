@@ -3,7 +3,9 @@
  * of the app, the useNavigate API to browser through the several pages and imports the PrivacyModal compt
  * that opens the privacy popup.
  * Also, it takes all the form datas and, at the submit funct, it records them to the localStorage object.
- */
+ * This components uses two different functs, the first funct is recordData which contains
+ * all the form datas, the second one will send all the datas to the localStorage.
+*/
 
 import { useContext } from "react";
 import { useState } from "react";
