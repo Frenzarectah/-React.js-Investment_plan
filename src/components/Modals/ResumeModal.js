@@ -12,15 +12,16 @@ const ResumeModal = (props) =>{
     const keysContainer = ["name","number","mail","country","accredited investor","min","max","Single Family","Residential Multifamily",
                             "Commercial Retail","Commercial Industrial","Commercial Hospitality","Commercial Warehousing","Commercial Office","Other"];
     const list = keysContainer.map((item, index) =>{
+                 if(localStorage[item]){   
                     return(
                         <div className="text-xs">{keysContainer[index]}:<b> {localStorage[item]}</b></div>
                     )
-                }
+                 }}
     )
     if (props.visibility){     
             return(
             <div id="modal" className="lg">
-                <div className="header">REVIEW YOUR DETAILS! <span onClick={()=>{window.location.reload();localStorage.clear()}}>X</span></div>
+                <div className="header">REVIEW YOUR DETAILS! <span onClick={()=>{window.location.href="/";localStorage.clear()}}>X</span></div>
                     <div className="content">
                         <p className="text-xs">Your Datas are the next:</p>           
                         {list}

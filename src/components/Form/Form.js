@@ -50,7 +50,12 @@ const Form = () =>{
                 </div>
                 <div className="w-[540px] flex flex-col">
                     <label className="text-[14px] text-[#A4AEB4]">Country:</label>
-                    <input type="text" name="country" onChange={(e) => recordData(e.target.name,e.target.value)} className="text-[21px] text-black border-b-2 border-[#D5D9DC]" required></input>
+                    <select name="country" onChange={(e) => recordData(e.target.name,e.target.value)} className="text-[21px] text-black border-b-2 border-[#D5D9DC]" required>
+                        <option value="Italia">Italia</option>
+                        <option value="Spagna">Spagna</option>
+                        <option value="Grecia">Grecia</option>
+                        <option value="Danimarca">Danimarca</option>
+                    </select>
                 </div>
                 <div className="w-[540px] mt-[30px] flex flex-col">
                    <div className="text-[21px] extrabold text-black">Privacy Policy</div>
