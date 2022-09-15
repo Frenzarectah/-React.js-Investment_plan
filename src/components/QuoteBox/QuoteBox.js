@@ -2,6 +2,7 @@
  * this is the component which renders the quote box, the datas about the quotes are contains 
  * into the pageInfo file used to storage them externally for a more readable code.
  * Also, this compts imports "globale" context to read the page number of the app.
+ * (because at every page is assigned a different quote)
 
 */
 
@@ -15,7 +16,7 @@ const QuoteBox = () =>{
     const [page,setPage] = useContext(globale);
     return(
         <>
-            <div style={{width:"23vw",height:"33vh"}} className="flex flex-col justify-center px-[20px] pt-[10px] items-start bg-white montserrat text-[#A4AEB4] text-md rounded">
+            <div className="w-[300px] h-[220px] flex flex-col justify-center px-[20px] pt-[10px] items-start bg-white montserrat text-[#A4AEB4] text-md rounded">
             <p>{pageInfo[page].cit}</p>
             <div className="mt-[10px] text-left w-full">
                 <p className="text-black font-semibold montserrat_alt">{pageInfo[page].name}</p>

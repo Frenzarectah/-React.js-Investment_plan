@@ -20,7 +20,7 @@ const ResumeModal = (props) =>{
     if (props.visibility){     
             return(
             <div id="modal" className="lg">
-                <div className="header">REVIEW YOUR DETAILS! <span onClick={()=>window.location.reload()}>X</span></div>
+                <div className="header">REVIEW YOUR DETAILS! <span onClick={()=>{window.location.reload();localStorage.clear()}}>X</span></div>
                     <div className="content">
                         <p className="text-xs">Your Datas are the next:</p>           
                         {list}

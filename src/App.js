@@ -1,3 +1,8 @@
+/**
+ * This is the start-point of the app, it initializes the context "globale" used in the whole app and
+ * load the Layout components that includes all the webapp.
+ */
+
 import './App.css';
 import React, { createContext, useState } from 'react';
 import Layout from './pages/Layout.js';
