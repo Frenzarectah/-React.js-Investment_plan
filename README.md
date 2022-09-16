@@ -1,8 +1,9 @@
 # Investment Plan Simulation
 
 This is my first #React.js App with the using of #tailwindcss for the page style =)<br>
-It uses #useState, #useContext, #react-router-dom and #navigate API 
-Try it <a href="https://investment-planz.netlify.app">here</a>!
+It uses #useState, #useContext, #react-router-dom and #navigate API<br> 
+
+## Try it <a href="https://investment-planz.netlify.app">here</a>!
 
 # Getting Started with Create React App
 
