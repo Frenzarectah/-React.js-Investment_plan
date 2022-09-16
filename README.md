@@ -1,11 +1,15 @@
-# Investment Plan Simulation [WIP]
+# Investment Plan Simulation
 
-This is my first #React.js App with the using of #tailwindcss for the page style, Stay tuned it will be amazing!<br>
-=)
+This is my first #React.js App with the using of #tailwindcss for the page style =)<br>
+It uses #useState, #useContext, #react-router-dom and #navigate API 
 
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## HOWTO
+
+For running the project in local, after the local cloning, run `npm install` to add all the dependencies on your PC.
 
 ## Available Scripts
 
