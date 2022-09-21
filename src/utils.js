@@ -1,3 +1,6 @@
+/**
+ * file to store eventually global utils/data/functs useful to the WebApp
+ */
 const pageInfo = {
     1:{
       title:"Contact Details",
@@ -19,5 +22,4 @@ const pageInfo = {
       role:"MANAGING DIRECTOR"}
   }
 
-  let userDatas = {};
-export { pageInfo, userDatas };
+export { pageInfo };

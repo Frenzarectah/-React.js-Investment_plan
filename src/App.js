@@ -4,10 +4,9 @@
  */
 
 import './App.css';
-import React, { createContext, useState } from 'react';
-import Layout from './pages/Layout.js';
+import React, { useState } from 'react';
+import Layout from './template/Layout.js';
 export const globale = React.createContext();
-
 
 
 function App() {

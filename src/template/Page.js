@@ -14,7 +14,7 @@ import {pageInfo} from '../utils';
 import '../App.css';
 
 const Page = () =>{
-    const [page,setPage] = useContext(globale);
+    const [page] = useContext(globale);
     return(
         <>
         <BrowserRouter>

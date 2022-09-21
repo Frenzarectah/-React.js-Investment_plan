@@ -38,8 +38,10 @@ const Form1 = ()=>{
                 <div className="w-[370px] mt-[50px]">
                     <p className="mt-[25px] text-black text-[21px]">Are you an accredited Investor?</p>
                     <p className="w-[300px] mt-[20px] flex flex-row justify-between">
+                    <fieldset id="accredited investor">    
                         <RadioBtn id="yes" checked={selected} value="accredited investor" funct={(e)=>{onChange(e)}} />
                         <RadioBtn id="no" checked={selected1} value="accredited investor" funct={(e)=>{onChange(e)}}/>
+                    </fieldset>
                     </p>
                 </div>
             </form>
