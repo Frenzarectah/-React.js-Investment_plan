@@ -13,7 +13,7 @@ import './QuoteBox.css';
 import UP from '../../assets/UP.png';
 
 const QuoteBox = () =>{
-    const [page,setPage] = useContext(globale);
+    const [page] = useContext(globale); //così va bene
     return(
         <>
             <div className="w-[300px] h-[220px] flex flex-col justify-center px-[20px] pt-[10px] items-start bg-white montserrat text-[#A4AEB4] text-md rounded">

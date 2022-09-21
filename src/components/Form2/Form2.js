@@ -15,6 +15,7 @@ const Form2 = () =>{
     }
     const checkList1 = ["Single Family","Residential Multifamily","Commercial Retail","Commercial Industrial"]
     const checkList2 = ["Commercial Hospitality","Commercial Warehousing","Commercial Office","Other"];
+    //gestirlo a livello di templating e fuori dal componente
     return(
     <div className="h-[420px]">
         <p className="montserrat_alt text-[21px] text-black">What kind of real estate are you interested in?</p>

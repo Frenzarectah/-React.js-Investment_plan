@@ -30,6 +30,7 @@ const Form = () =>{
         for(let key in content){
             localStorage.setItem([key], content[key]);
         }
+        //delegare 30-32 a funzione esterna per generalizzare storage
         let redir = "../page"+page;
         browse(redir);
         setPage(page+1);

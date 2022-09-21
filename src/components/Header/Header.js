@@ -9,14 +9,14 @@ import HelpModal from "../Modals/HelpModal";
 import { useState } from "react";
 
 const Header = () =>{
-    const [page,setPage] = useContext(globale);
+    const [page] = useContext(globale);
     const [open,setOpen] = useState(false);
     return(
         <div className='flex flex-row justify-between w-full'>
             <div className='text-[#A4AEB4]'>STEP {page} OF 3</div>
-            <div>Lost or have trouble? <a onClick={()=>setOpen(!open)}className='text-[#2696E8] hover:underline'>Get Help!</a></div>
+            <div>Lost or have trouble? <span onClick={()=>setOpen(!open)}className='text-[#2696E8] hover:underline'>Get Help!</span></div>
             <HelpModal visibility={open}/>
         </div>
-    )
+    ) //helpmodal state da gestire preferibilimente qui
 }
 export default Header;

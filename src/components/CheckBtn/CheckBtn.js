@@ -17,7 +17,7 @@ const CheckBtn = (props)=>{
     
     let classes="";
     checked?classes="selected":classes="unselected";
-    
+    //inserirlo direttamente nella parte di rendering
     return(
         <div className={classes} key={props.key}>
             <input id={props.num} checked={checked} type="checkbox" value={props.descr} onChange={(e)=>onChange(e)}/>

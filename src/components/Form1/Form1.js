@@ -13,6 +13,7 @@ const Form1 = ()=>{
     const [page,setPage] = useContext(globale);
     const [selected,setSelected] = useState(true);
     const [selected1,setSelected1] = useState(false);
+    //radio group 
     
     let browse = useNavigate();
     
@@ -22,6 +23,7 @@ const Form1 = ()=>{
         browse(redir);
         setPage(page+1);
     }
+    //funzione unica globale esterna
     const onChange = (event) =>{
         setSelected(!selected);
         setSelected1(!selected1);
