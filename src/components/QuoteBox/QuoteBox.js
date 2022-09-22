@@ -13,18 +13,18 @@ import './QuoteBox.css';
 import UP from '../../assets/UP.png';
 
 const QuoteBox = () =>{
-    const [page] = useContext(globale); //così va bene
+    const [page] = useContext(globale); 
     return(
         <>
             <div className="w-[80%] h-[10%] flex flex-col justify-center px-[20px] pt-[10px] items-start bg-white montserrat text-[#A4AEB4] text-md rounded">
-            <p>{pageInfo[page].cit}</p>
+            <p className="text-sm">{pageInfo[page].cit}</p>
             <div className="mt-[10px] text-left w-full">
                 <p className="text-black font-semibold montserrat_alt text-sm">{pageInfo[page].name}</p>
                 <p className="text-sm">{pageInfo[page].role}</p>
                 <p className="flex w-full justify-end"><img alt="up logo" src={UP}/></p>
             </div>
             </div>               
-            <div className="citate w-[56px] h-[56px] bg-white rounded shadow-black z-10 border border-[#35A0EE]"></div>
+            <div className="citate w-[45px] h-[45px] bg-white rounded shadow-black z-10 border border-[#35A0EE]"></div>
         </>
     )
 }

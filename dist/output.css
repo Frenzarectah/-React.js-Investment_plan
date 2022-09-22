@@ -627,6 +627,18 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: 56px;
 }
 
+.h-\[100px\] {
+  height: 100px;
+}
+
+.h-\[150px\] {
+  height: 150px;
+}
+
+.h-\[45px\] {
+  height: 45px;
+}
+
 .w-full {
   width: 100%;
 }
@@ -689,6 +701,14 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .w-\[80\%\] {
   width: 80%;
+}
+
+.w-\[150px\] {
+  width: 150px;
+}
+
+.w-\[45px\] {
+  width: 45px;
 }
 
 .min-w-fit {
@@ -776,6 +796,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .p-\[52px\] {
   padding: 52px;
+}
+
+.p-\[20px\] {
+  padding: 20px;
 }
 
 .px-\[20px\] {
