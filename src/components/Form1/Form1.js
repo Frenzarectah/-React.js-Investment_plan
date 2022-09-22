@@ -31,7 +31,7 @@ const Form1 = ()=>{
         localStorage.setItem(event.target.value,selected1);
     }
     return(
-        <div className="montserrat_alt w-100 h-2/3">
+        <div className="montserrat_alt w-100 h-[400px]">
             <p className="text-black text-[21px] mb-[20px]">How much are you planning to invest in this year?</p>
             <form id="Investment plans" onSubmit={submitting}>
                 <Slider/>
