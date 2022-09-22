@@ -4,7 +4,7 @@ import Page from './Page';
 
 const RightSide = () =>{
     return(
-        <div className="flex flex-col mt-[10px] mx-[50px]">
+        <div className="w-2/3 h-full flex flex-col mt-[10px] mx-[50px]">
             <Header/>
             <Page/>
         </div>

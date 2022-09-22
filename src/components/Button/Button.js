@@ -4,18 +4,13 @@
  * which form is able to submit
  */
 
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import { globale } from "../../App";
+import { pageInfo } from "../../utils";
 
 const Button = (props) =>{
-    const [page,setPage] = useContext(globale);
-    let formName = "";
-    switch(page){
-        case 1: formName+="form";break;
-        case 2: formName+="investment_form";break;
-        case 3: formName+="investment_plan";break;
-    }
-       
+    const [page] = useContext(globale);
+    
     const style={
         "width":"154px",
         "height":"48px",
@@ -23,7 +18,7 @@ const Button = (props) =>{
         "color":props.color,
     }
     return(
-        <button type="submit" className="montserrat rounded" form={formName} style={style}>{props.text}</button>
+        <button type="submit" className="montserrat rounded" form={pageInfo[page].title} style={style}>{props.text}</button>
     )
 }
 export default Button;

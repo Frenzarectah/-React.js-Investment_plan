@@ -11,13 +11,13 @@ import {pageInfo} from "../../utils";
 
 const ProgressSet = ()=>{
 
-    return Object.keys(pageInfo).map(item=>{
+    return Object.keys(pageInfo).map((item,index)=>{
         if(Object.keys(pageInfo).length != item){
             return(
-                <Progress descr={pageInfo[item].title} num={item} />
+                <Progress key={index} descr={pageInfo[item].title} num={item} />
             )}else{
             return(
-                <LastProgress descr={pageInfo[item].title} num={item} />
+                <LastProgress key={index} descr={pageInfo[item].title} num={item} />
             )
         }
     })

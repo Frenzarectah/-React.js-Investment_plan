@@ -22,8 +22,8 @@ const Progress = (props)=>{
                 </div>
                 <p className="pl-5 self-center">{props.descr}</p>
         </div>
-                <img alt="vertical rectangle" class="mt-2 ml-3 w-[4px] h-[9px]" src={rect_vert}/>
-                <img alt="vertical rectangle" class="mt-2 ml-3 mb-2 w-[4px] h-[9px]" src={rect_vert}/>
+                <img alt="vertical rectangle" className="mt-2 ml-3 w-[4px] h-[9px]" src={rect_vert}/>
+                <img alt="vertical rectangle" className="mt-2 ml-3 mb-2 w-[4px] h-[9px]" src={rect_vert}/>
         </div>
     )        
 }

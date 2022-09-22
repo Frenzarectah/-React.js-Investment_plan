@@ -19,7 +19,7 @@ const Footer = () =>{
     }
 
     return(
-        <footer className="mt-[15px] mr-0 w-full flex flex-row justify-between items-baseline">
+        <footer className="mt-3 mr-0 w-full flex flex-row justify-between items-baseline">
             <div className="w-1/3 ml-[12px] text-[16px] text-[#2696E8] flex flex-row items-baseline">
             <a href="#" onClick={
                 ()=>{
