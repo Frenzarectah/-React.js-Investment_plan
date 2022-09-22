@@ -33,7 +33,7 @@ const Form1 = ()=>{
     return(
         <div className="montserrat_alt w-100 h-[420px]">
             <p className="text-black text-[21px] mb-[20px]">How much are you planning to invest in this year?</p>
-            <form id="investment_form" onSubmit={submitting}>
+            <form id="Investment plans" onSubmit={submitting}>
                 <Slider/>
                 <div className="w-[370px] mt-[50px]">
                     <p className="mt-[25px] text-black text-[21px]">Are you an accredited Investor?</p>

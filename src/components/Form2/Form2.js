@@ -6,6 +6,7 @@
 import {React, useState} from "react";
 import CheckBtn from "../CheckBtn/CheckBtn";
 import ResumeModal from "../Modals/ResumeModal";
+import { checkList } from "../../utils";
 const Form2 = () =>{
     const [visible,setVisible] = useState(false);
     
@@ -13,22 +14,16 @@ const Form2 = () =>{
         event.preventDefault();
         setVisible(true);
     }
-    const checkList1 = ["Single Family","Residential Multifamily","Commercial Retail","Commercial Industrial"]
-    const checkList2 = ["Commercial Hospitality","Commercial Warehousing","Commercial Office","Other"];
+   
     //gestirlo a livello di templating e fuori dal componente
     return(
     <div className="h-[420px]">
         <p className="montserrat_alt text-[21px] text-black">What kind of real estate are you interested in?</p>
-        <form id="investment_plan" className="flex flex-col" onSubmit={(e)=>submitting(e)}>
-            <div className="flex flex-row">
-                {checkList1.map((item) =>
-                    <CheckBtn key={checkList1.indexOf(item)} descr={item} />
+        <form id="Investment details" className="flex flex-col" onSubmit={(e)=>submitting(e)}>
+            <div className="w-[750px] flex flex-rown flex-wrap">
+                {checkList.map((item,index) =>
+                    <CheckBtn key={index} descr={item} />
                 )}
-            </div>
-            <div className="flex flex-row">
-                {checkList2.map((item) =>
-                    <CheckBtn key={checkList2.indexOf(item)} descr={item} />
-                )}    
             </div>
         </form>
     <ResumeModal visibility={visible}/>

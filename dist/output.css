@@ -535,8 +535,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-top: 50px;
 }
 
-.mt-\[20px\] {
-  margin-top: 20px;
+.mt-\[10px\] {
+  margin-top: 10px;
 }
 
 .mt-\[12px\] {
@@ -545,14 +545,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .mr-\[245px\] {
   margin-right: 245px;
-}
-
-.mt-\[35px\] {
-  margin-top: 35px;
-}
-
-.mt-\[10px\] {
-  margin-top: 10px;
 }
 
 .mt-\[15px\] {
@@ -577,6 +569,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .mt-\[25px\] {
   margin-top: 25px;
+}
+
+.mt-\[20px\] {
+  margin-top: 20px;
 }
 
 .mt-2 {
@@ -611,6 +607,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: 48px;
 }
 
+.h-\[420px\] {
+  height: 420px;
+}
+
 .h-\[11px\] {
   height: 11px;
 }
@@ -619,36 +619,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: 9px;
 }
 
-.h-\[56px\] {
-  height: 56px;
-}
-
-.h-\[500px\] {
-  height: 500px;
-}
-
-.h-\[450px\] {
-  height: 450px;
-}
-
-.h-\[400px\] {
-  height: 400px;
-}
-
-.h-\[420px\] {
-  height: 420px;
-}
-
-.h-\[100px\] {
-  height: 100px;
-}
-
-.h-\[250px\] {
-  height: 250px;
-}
-
 .h-\[220px\] {
   height: 220px;
+}
+
+.h-\[56px\] {
+  height: 56px;
 }
 
 .w-full {
@@ -687,6 +663,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 300px;
 }
 
+.w-\[7\/10\] {
+  width: 7 / 10;
+}
+
 .w-\[11px\] {
   width: 11px;
 }
@@ -703,8 +683,24 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 50%;
 }
 
-.w-\[200px\] {
-  width: 200px;
+.w-3\/4 {
+  width: 75%;
+}
+
+.w-\[550px\] {
+  width: 550px;
+}
+
+.w-\[600px\] {
+  width: 600px;
+}
+
+.w-\[700px\] {
+  width: 700px;
+}
+
+.w-\[750px\] {
+  width: 750px;
 }
 
 .flex-row {
@@ -713,6 +709,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .flex-col {
   flex-direction: column;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
 }
 
 .items-start {
@@ -763,6 +763,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 .border-\[\#35A0EE\] {
   --tw-border-opacity: 1;
   border-color: rgb(53 160 238 / var(--tw-border-opacity));
+}
+
+.border-black {
+  --tw-border-opacity: 1;
+  border-color: rgb(0 0 0 / var(--tw-border-opacity));
 }
 
 .bg-\[\#35A0EE\] {

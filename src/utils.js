@@ -21,5 +21,7 @@ const pageInfo = {
       name:"Ollie Mcmahon",
       role:"MANAGING DIRECTOR"}
   }
+  const checkList = ["Single Family","Residential Multifamily","Commercial Retail","Commercial Industrial",
+  "Commercial Hospitality","Commercial Warehousing","Commercial Office","Other"];
 
-export { pageInfo };
+export { pageInfo,checkList };
