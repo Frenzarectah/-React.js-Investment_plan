@@ -11,12 +11,12 @@ import logo2 from '../assets/PROPERTIES.png';
 
 const LeftSide = () =>{
     return(
-        <div className="w-[500px] h-full bg-[#35A0EE] p-[52px]">
-        <div class="flex flex-row"><img alt="logo" src={logo1}/><img alt="logo" src={logo2}/></div>
-        <div class="mt-[100px]"> 
+        <div className="w-1/3 h-full bg-[#35A0EE] p-[52px]">
+        <div className="flex flex-row"><img alt="logo" src={logo1}/><img alt="logo" src={logo2}/></div>
+        <div className="mt-24"> 
          <ProgressSet/>
         </div>
-        <div class="mt-[50px]">
+        <div className="mt-20">
          <QuoteBox/>   
         </div>
         </div>

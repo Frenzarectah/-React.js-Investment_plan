@@ -23,12 +23,12 @@ const Slider = () =>{
       localStorage.setItem("max",valuerMax);
     }
     return(
-        <div className="mt-[20px] w-full">
+        <div className="mt-3 w-full">
               <div className="w-full flex flex-row text-[#A4AEB4]">
                 <div className="w-1/2">From:</div>
                 <div className="w-1/2">To:</div>
               </div>
-              <div className="w-full flex flex-row mb-[40px]">
+              <div className="w-full flex flex-row mb-3">
                 <input type="text" className="w-1/2 text-black" placeholder={valuerMin} />
                 <input type="text" className="w-1/2 text-black" placeholder={valuerMax} />
               </div>

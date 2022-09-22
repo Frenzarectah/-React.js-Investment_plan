@@ -17,7 +17,7 @@ const Form2 = () =>{
    
     //gestirlo a livello di templating e fuori dal componente
     return(
-    <div className="h-[420px]">
+    <div className="h-2/3">
         <p className="montserrat_alt text-[21px] text-black">What kind of real estate are you interested in?</p>
         <form id="Investment details" className="flex flex-col" onSubmit={(e)=>submitting(e)}>
             <div className="w-[750px] flex flex-rown flex-wrap">

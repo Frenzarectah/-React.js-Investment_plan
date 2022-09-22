@@ -31,13 +31,13 @@ const Form1 = ()=>{
         localStorage.setItem(event.target.value,selected1);
     }
     return(
-        <div className="montserrat_alt w-100 h-[420px]">
+        <div className="montserrat_alt w-100 h-2/3">
             <p className="text-black text-[21px] mb-[20px]">How much are you planning to invest in this year?</p>
             <form id="Investment plans" onSubmit={submitting}>
                 <Slider/>
                 <div className="w-[370px] mt-[50px]">
                     <p className="mt-[25px] text-black text-[21px]">Are you an accredited Investor?</p>
-                    <p className="w-[300px] mt-[20px] flex flex-row justify-between">
+                    <p className="w-[300px] mt-2 flex flex-row justify-between">
                     <fieldset id="accredited investor">    
                         <RadioBtn id="yes" checked={selected} value="accredited investor" funct={(e)=>{onChange(e)}} />
                         <RadioBtn id="no" checked={selected1} value="accredited investor" funct={(e)=>{onChange(e)}}/>
