@@ -16,10 +16,10 @@ const QuoteBox = () =>{
     const [page] = useContext(globale); //così va bene
     return(
         <>
-            <div className="w-[300px] h-[220px] flex flex-col justify-center px-[20px] pt-[10px] items-start bg-white montserrat text-[#A4AEB4] text-md rounded">
+            <div className="w-[80%] h-[10%] flex flex-col justify-center px-[20px] pt-[10px] items-start bg-white montserrat text-[#A4AEB4] text-md rounded">
             <p>{pageInfo[page].cit}</p>
             <div className="mt-[10px] text-left w-full">
-                <p className="text-black font-semibold montserrat_alt">{pageInfo[page].name}</p>
+                <p className="text-black font-semibold montserrat_alt text-sm">{pageInfo[page].name}</p>
                 <p className="text-sm">{pageInfo[page].role}</p>
                 <p className="flex w-full justify-end"><img alt="up logo" src={UP}/></p>
             </div>
