@@ -18,7 +18,7 @@ const Page = () =>{
     return(
         <>
         <BrowserRouter>
-        <div className='mt-6 flex flex-col'>
+        <div className='mt-3 flex flex-col'>
             <div className='montserrat-alt text-black extrabold text-[28px]'>
                 {pageInfo[page].title}
             </div>

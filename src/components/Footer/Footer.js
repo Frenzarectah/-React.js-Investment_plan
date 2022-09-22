@@ -19,15 +19,15 @@ const Footer = () =>{
     }
 
     return(
-        <footer className="mt-3 mr-0 w-full flex flex-row justify-between items-baseline">
+        <footer className="mt-1.5 mr-0 w-full flex flex-row justify-between items-baseline">
             <div className="w-1/3 ml-[12px] text-[16px] text-[#2696E8] flex flex-row items-baseline">
-            <a href="#" onClick={
+            <span onClick={
                 ()=>{
                     setPage(1);
                     browse("../", { replace: true});
                 }}>  
-                <img style={{width:"16px",height:"8px"}} src={arrow}/>
-            </a>
+                <img alt="arrow" className="w-[16px] h-[8px]" src={arrow}/>
+            </span>
             <span className="montserrat">Back to Homepage</span>
             </div>
             <div>
